@@ -1,0 +1,187 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register Src="UserControls/UserInfo.ascx" TagName="UserInfo" TagPrefix="uc5" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Electronics Shop</title>
+    
+    <link href="MasterStyleSheet.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+  
+    <style type="text/css">
+
+        .style27
+        {
+            width: 346px;
+        }
+        .style28
+        {
+            width: 785px;
+            height: 237px;
+        }
+        .style29
+        {
+            width: 115px;
+            height: 237px;
+        }
+        .style30
+        {
+            width: 504px;
+        }
+        .style31
+        {
+            height: 70px;
+            text-align: right;
+        }
+        .style32
+        {
+            text-align: right;
+        }
+        
+    </style>
+  
+</head>
+<body style="background:#ccffff">
+    <form id="form1" runat="server">
+    <div>
+    </div>
+    <table align="center" class="style1" style="background-color:#ffffff">
+        <tr>
+            <td align="center" bgcolor="#CCFF66" class="style33" colspan="3">
+                &nbsp;
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="style31" colspan="3" bgcolor="#CCFF66">
+                <div class="style32">
+                &nbsp;<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+&nbsp;&nbsp;
+                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/About Us.aspx">About Us</asp:HyperLink>
+&nbsp;&nbsp;
+                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Feedback.aspx">Feedback</asp:HyperLink>
+            &nbsp;&nbsp;<asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Contact Us.aspx">Contact Us</asp:HyperLink>
+           
+        &nbsp;&nbsp;&nbsp;&nbsp;<asp:HyperLink ID="HyperLink8" runat="server" 
+                    NavigateUrl="~/Login.aspx">Members-only</asp:HyperLink>
+                &nbsp;&nbsp;&nbsp;&nbsp;</div>
+                <table align="center" bgcolor="White" class="style9">
+                    <tr>
+                        <td bgcolor="#CCFF66" class="style27" rowspan="2">
+                            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/logo.JPG" 
+                                onclick="ImageButton1_Click1" PostBackUrl="~/Default.aspx" Width="332px" />
+                            <br class="style24" />
+                            
+
+                        </td>
+                        <td bgcolor="#CCFF66" class="style30">
+                            <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Login.aspx">Login</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:HyperLink ID="HyperLink6" runat="server" 
+                                NavigateUrl="~/Create Account.aspx">Create an account</asp:HyperLink>
+&nbsp;&nbsp;
+                            <asp:HyperLink ID="HyperLink7" runat="server">CartSummary</asp:HyperLink>
+&nbsp;&nbsp;&nbsp; </td>
+                        <td bgcolor="#CCFF66" rowspan="2" style="text-align: right">
+                                <uc5:UserInfo ID="UserInfo1" runat="server" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#CCFF66" class="style30">
+                            Search by keyword
+                            <asp:TextBox ID="TextBox1" runat="server" Height="26px" 
+                                style="margin-bottom: 0px; margin-left: 5px;" Width="191px"></asp:TextBox>
+                            <asp:Button ID="Button1" runat="server" Height="27px" Text="Go" Width="54px" 
+                                onclick="Button1_Click" />
+                            <br />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- Menu -->
+        <tr>
+            <td class="style25" bgcolor="#CCFF66">&nbsp;</td>
+            <td class="style26" >
+               
+               <div id="centeredmenu">
+   <ul>
+      <li><a href="#">Computers</a>
+         <ul>
+            <li><a href="list.aspx?SupplierID=7&CategoryID=1">Philips</a></li>
+            <%--<li><a href="list.aspx?SupplierID=4&CategoryID=1">Sony</a></li>
+            <li><a href="list.aspx?SupplierID=11&CategoryID=1">Samsung</a></li>
+            <li><a href="list.aspx?SupplierID=5&CategoryID=1">Toshiba</a></li>--%>
+         </ul>
+      </li>
+       <li><a href="#">Television</a>
+         <ul>
+            <li><a href="list.aspx?SupplierID=7&CategoryID=6">Philips</a></li>
+            <li><a href="list.aspx?SupplierID=3&CategoryID=6">Sanio</a></li>
+            <li><a href="list.aspx?SupplierID=6&CategoryID=6">Panasonic</a></li>
+            <li><a href="list.aspx?SupplierID=4&CategoryID=6">Sony</a></li>
+         </ul>
+      </li>
+      <li class="active"><a href="#" class="active">Cameras</a>
+         <ul>
+            <li><a href="list.aspx?SupplierID=1&CategoryID=3">Canon</a></li>
+            <li><a href="list.aspx?SupplierID=4&CategoryID=3">Sony</a></li>
+            
+         </ul>
+      </li>
+      <li><a href="#">Celphones</a>
+         <ul>
+            <li><a href="list.aspx?SupplierID=10&CategoryID=4">BlackBerry</a></li>
+            <li><a href="list.aspx?SupplierID=11&CategoryID=4">SamsungII</a></li>
+            <li><a href="list.aspx?SupplierID=2&CategoryID=4">Apple</a></li>
+            
+         </ul>
+      </li>
+      <li><a href="#">Tablets</a>
+         <ul class="last">
+            <li><a href="list.aspx?SupplierID=10&CategoryID=5">BlackBerry</a></li>
+            <li><a href="list.aspx?SupplierID=3&CategoryID=5">Sharp</a></li>
+            <li><a href="list.aspx?SupplierID=2&CategoryID=5">Apple</a></li>
+            <li><a href="list.aspx?SupplierID=11&CategoryID=5">samsung</a></li>
+         </ul>
+      </li>
+   </ul>
+</div>
+            </td>            
+            <td bgcolor="#CCFF66" class="style26" >
+               
+                &nbsp;</td>            
+        </tr>
+        <tr>
+            <td align="center" class="style29" bgcolor="#CCFF66">
+                
+                <br />
+                <br />
+                </td>
+            <td align="center" class="style28">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                       
+                    <p>
+                        &nbsp;</p>
+                       
+                </asp:ContentPlaceHolder>
+            </td>
+            <td bgcolor="#CCFF66" class="style15">
+            
+            </td>
+        </tr>
+        <tr>
+            <td align="right" bgcolor="#CCFF66" colspan="3">
+                <a href="http://www.youtube.com">&nbsp;<img src="Images/youtube.jpg" style="height: 38px; width: 34px" /></a>&nbsp;
+                <a href="http://www.facebook.com"><img src="Images/facebook.jpg" style="height: 41px; width: 39px" /></a>&nbsp;
+                <a href="http://www.twitter.com"><img src="Images/twitter.jpg" style="height: 38px; width: 34px" /></a>
+            </td>
+        </tr>
+    </table>
+    </form>
+    </body>
+</html>

@@ -1,0 +1,145 @@
+﻿a {text-decoration:none;}
+a:hover {text-decoration:underline overline; background-color:#C2D24D;}
+body 
+{
+    width:950px; 
+    margin-left:auto;margin-right:auto; 
+    height: 511px;
+    font-family: "Times New Roman", Times, serif;   
+        
+}
+/* Main menu settings */
+#centeredmenu {
+   clear:both;
+   float:left;
+   margin:0;
+   padding:0;
+   border-bottom:3px solid #CCFF66; /* line below menu */
+   width:100%;
+   font-family:"Times New Roman", Times, serif;
+   font-size:100%; /* Menu text size */
+   z-index:1000; /* This makes the dropdown menus appear above the page content below */
+   position:relative;
+}
+
+#centeredmenu ul {
+   margin:0;
+   padding:0;
+   list-style:none;
+   float:right;
+   position:relative;
+   right:50%;
+}
+#centeredmenu ul li {
+   
+   float:left;
+   position:relative;
+   left:50%;  
+   display:block;
+   padding:.5em .6em .3em;  
+   }
+
+#centeredmenu ul li a:hover {
+   background:#C2D24D; /* Top menu items background colour */
+   color:#fff;
+  
+}
+
+
+/* Submenu items */
+#centeredmenu ul ul {
+   display:none; /* Sub menus are hiden by default */
+   position:absolute;
+   top:2em;
+   left:0;
+   right:auto; 
+   width:5em;
+   background:#CCFF66 
+}
+#centeredmenu ul ul li {
+   left:auto;  
+   margin:0; 
+   clear:left;
+   width:100%;
+}
+
+
+
+/* Make the sub menus appear on hover */
+#centeredmenu ul li:hover ul,
+#centeredmenu ul li.hover ul { 
+   display:block; /* Show the sub menus */
+   
+}
+
+
+   .style1
+        {
+            width: 100%;
+            height: 284px;
+        }
+        .style3
+        {
+            width: 553px;
+            height: 237px;
+        }
+        .style4
+        {
+            width: 186px;
+            height: 237px;
+        }
+        .style6
+        {
+            height: 70px;
+        }
+        .style7
+        {
+            height: 12px;
+            text-align: right;
+        }
+        .style8
+        {
+            height: 12px;
+            font-size: xx-large;
+        }
+        .style9
+        {
+            width: 100%;
+            height: 87px;
+        }
+        .style14
+        {
+            text-align: center;
+        }
+        .style15
+        {
+            height: 237px;
+            text-align: center;
+        }
+        .style17
+        {
+            width: 575px;
+        }
+        .style18
+        {
+            font-family: "Segoe Script";
+            font-size: large;
+        }
+         .style22
+        {
+            width: 521px;
+            height: 237px;
+        }
+        .style23
+        {
+            width: 140px;
+            height: 237px;
+        }
+              
+        .style24
+        {
+            font-family: "Times New Roman", Times, serif;
+            font-size: xx-large;
+        }
+              
+    

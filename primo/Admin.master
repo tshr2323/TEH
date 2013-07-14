@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin" %>
+<%@ Register Src="UserControls/UserInfo.ascx" TagName="UserInfo" TagPrefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+  <title>Admin Master</title>
+    <style type="text/css">
+        .style1
+        {
+            width: 234px;
+        }
+    </style>
+</head>
+<body>
+  <form id="form1" runat="server">
+  <table align="center" width="70%" bgcolor="White" style="height: 224px">
+  <tr><td colspan="2">
+
+        &nbsp;</td></tr>
+  <tr><td colspan="2" </td></tr>
+  <tr><td align="left" valign="20%">
+  <table><tr><td class="style1">
+          <uc1:UserInfo ID="UserInfo1" runat="server" />
+          </td></tr></table>
+  </td>
+  <td width="80%">
+  <span class="AdminTitle">
+           
+          </span> 
+          <div>
+          (<a href="Default.aspx" class="AdminPageText">go back</a>)
+          <br />
+          </div>
+          <div>
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+          </asp:ContentPlaceHolder>
+          </div>
+          <div>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+    </asp:ContentPlaceHolder>      
+          </div>
+  </td></tr>
+  </table>
+  </form>
+</body>
+</html>
