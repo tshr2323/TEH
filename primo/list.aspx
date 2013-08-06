@@ -31,7 +31,8 @@
             </SelectParameters>
      </asp:SqlDataSource>
 
-        <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
+        <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1" 
+            onitemcommand="Repeater1_ItemCommand">
 
         <HeaderTemplate>
         <table style="width: 100%;">
@@ -58,12 +59,14 @@
                 <td class="style35" rowspan="2">
                     $ <%# Eval("Cost")%>
                 </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
+                        <td>
+                            <asp:Label ID="Label1" runat="server" Text="Quantity"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="Quantity" runat="server" Text='<%# Eval("Quantity")%>'></asp:TextBox>
+                        </td>
+                        <td>
+                            <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%#String.Format("{0}",Eval("ItemID"))%>'>AddItem</asp:LinkButton>
             </tr>
         </ItemTemplate>
         
