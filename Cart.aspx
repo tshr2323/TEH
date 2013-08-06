@@ -16,6 +16,21 @@
         {
             color: #336699;
         }
+        .style33
+        {
+            width: 257px;
+        }
+        .style35
+        {
+            height: 23px;
+            text-align: left;
+        }
+        .style36
+        {
+            height: 23px;
+            text-align: right;
+            width: 387px;
+        }
     </style>
 
 </asp:Content>
@@ -44,6 +59,39 @@
         setTimeout("location.reload(true);", 1500);
  }
 </script>
-    <asp:Label ID="Label1" runat="server" onload="Label1_Load" Text="No Item"></asp:Label>
+    
+    <asp:Label ID="Label1" runat="server" onload="Label1_Load" Text="No Item" 
+        ></asp:Label>
+    <br />
+    <table style="width:100%;">
+        <tr>
+            <td class="style36">
+                <asp:Label ID="Label2" runat="server" Text="Contact No:"></asp:Label>
+            </td>
+            <td class="style35">
+                <asp:Label ID="Adress" runat="server" Text="None"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="style36">
+                <asp:Label ID="Label3" runat="server" Text="User Name:"></asp:Label>
+            </td>
+            <td class="style35">
+                <asp:Label ID="Name" runat="server" Text="None"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="style36">
+                <asp:Label ID="Label4" runat="server" Text="Total:"></asp:Label>
+            </td>
+            <td class="style35">
+                <asp:Label ID="Total" runat="server" Text="None"></asp:Label>
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <asp:Button ID="Button1" runat="server" Text="Submit" BorderStyle="Solid" 
+        onclick="Button1_Click" />
+    <br />
 
 </asp:Content>
