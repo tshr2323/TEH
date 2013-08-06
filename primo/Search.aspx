@@ -16,48 +16,62 @@
 
 
 
-        <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
+        <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1" 
+            onitemcommand="Repeater1_ItemCommand">
 
         <HeaderTemplate>
-        <table style="width: 100%;">
-        </HeaderTemplate>
+        <table>
+        <tr>
+            <table>
+                </HeaderTemplate>
 
-        <ItemTemplate>
-            <tr>
-                <td class="style35" rowspan="2">
-                    
-                <img alt="" src="Images/<%# Eval("ImageFile") %>" style="height: 38px; width: 34px" border="0"/></img>
+                <ItemTemplate>
+                 <td>
 
-                </td>
-                <td colspan="2">
-                    <%# Eval("ItemID")%> : <asp:Label ID="NameLabel" runat="server" Text='<%# Eval("ItemName") %>' />
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <asp:Label ID="DescriptionLabel" runat="server" 
-                    Text='<%# Eval("Description") %>' />
-                </td>
-            </tr>
-            <tr>
-                <td class="style35" rowspan="2">
-                    $ <%# Eval("Cost")%>
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-                <td>
-                    &nbsp;
-                </td>
-            </tr>
-        </ItemTemplate>
+                 </td>
+                    <tr>
+                        <td>
+                        <asp:Label ID="ItemID" runat="server" Text='<%# Eval("ItemID")%>'/>:<asp:Label ID="NameLabel" runat="server" Text='<%# Eval("ItemName") %>' />
+                        </td>
+                        <td>    
+                        <img alt="" src="Images/<%# Eval("ImageFile") %>" style="height: 38px; width: 34px" border="0"/></img>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <asp:Label ID="DescriptionLabel" runat="server" 
+                            Text='<%# Eval("Description") %>' />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="style35" rowspan="2">
+                            $ <%# Eval("Cost")%>
+                        </td>
+                        <td>
+                            <asp:Label ID="Label1" runat="server" Text="Quantity"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="Quantity" Name="Quantity" runat="server" Text='<%# Eval("Quantity") %>' TabIndex="1"></asp:TextBox>
+                        </td>
+                        <td>
+                            <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%#String.Format("{0}",Eval("ItemID"))%>'>AddItem</asp:LinkButton>
+                                                       
+                        </td>
+                    </tr>
+                </ItemTemplate>
         
-        <FooterTemplate>
+                <FooterTemplate>
+                </table>
+            </tr>
+            <tr>
+               <table>
+                <td>
+                    
+                </td>
+               </table>
+            </tr>
             </table>
         </FooterTemplate>
-
-
-
         </asp:Repeater>
 
 
